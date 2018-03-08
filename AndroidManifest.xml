@@ -1,0 +1,96 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tk.zhla.citsoft.pan"
+    android:versionCode="123456"
+    android:versionName="0.0.1" android:installLocation="auto">
+
+   <uses-sdk android:minSdkVersion="13" android:maxSdkVersion="20"></uses-sdk>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+       <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="true"
+        android:name="tk.zhla.citsoft.pan.application.UILApplication"
+        android:theme="@style/AppTheme" >
+         <activity android:name="tk.zhla.citsoft.pan.ui.LoginActivity"
+               android:screenOrientation="portrait" >
+               <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity android:name="tk.zhla.citsoft.pan.ui.MainFragmentActivity" 
+               android:screenOrientation="portrait">
+        </activity>
+        
+             <!-- 锁屏的activity -->
+        <activity
+            android:name="com.lockscreen.pattern.UnlockGesturePasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lockscreen.pattern.UnlockGesturePassword2Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lockscreen.pattern.OffUnlockPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lockscreen.pattern.CreateGesturePasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lockscreen.pattern.GuideGesturePasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="tk.zhla.citsoft.pan.ui.SettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="tk.zhla.citsoft.pan.ui.AboutActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="tk.zhla.citsoft.pan.ui.UpLoadActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+         <activity
+            android:name="tk.zhla.citsoft.pan.ui.PhotoShowActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+         
+           <activity
+            android:name="tk.zhla.citsoft.pan.ui.AutoPhotoBackupsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+           
+            <activity
+            android:name="tk.zhla.citsoft.pan.ui.AutoPhotoBackupChooseAlbumAvtivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="tk.zhla.citsoft.pan.ui.FindPwdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+              
+               <activity
+            android:name="tk.zhla.citsoft.pan.ui.DownloadED"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+            
+            <service android:name="tk.zhla.citsoft.pan.service.UpLoadService"></service>
+        
+        
+    </application>
+
+</manifest>
