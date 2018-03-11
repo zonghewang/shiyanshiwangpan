@@ -199,9 +199,9 @@ public abstract class BaseFragment extends Fragment {
 		RequestParam param = new RequestParam();
 		ShareUtils utils = new ShareUtils(getActivity());
 		if(type==-1){
-			param.url = utils.getURL()+"/a1/index?ct=list&aid=1&cid="+cid+"&o="+order+"&asc="+ascOrdesc+"&offset="+offset+"&limit=100";
+			param.url = utils.getURL()+"/app/mydisk.php?item=file&cid="+cid+"&o="+order+"&asc="+ascOrdesc+"&offset="+offset+"&limit=100";
 		}else {
-			param.url = utils.getURL()+"/a1/index?ct=list&aid=1&cid="+cid+"&o="+order+"&asc="+ascOrdesc+"&offset="+offset+"&limit=100&type="+type;
+			param.url = utils.getURL()+"/app/mydisk.php?item=file&cid="+cid+"&o="+order+"&asc="+ascOrdesc+"&offset="+offset+"&limit=100&type="+type;
 		}
 		param.method = RequestParam.GET;
 		param.parse = new FileListParse();
